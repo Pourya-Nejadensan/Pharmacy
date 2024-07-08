@@ -18,4 +18,12 @@ public class Pharmacy {
     public void delete(String medicationName){
         medications.remove(medicationName);
     }
+
+    public void printMedications(){
+        for(Map.Entry<String,Medication> entry : medications.entrySet()){
+            System.out.println(entry.getKey() + ": " + entry.getValue().getName()
+                    + ", " + entry.getValue().getAvailability()
+                    + ", " + entry.getValue().getPrice());
+        }
+    }
 }
