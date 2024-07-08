@@ -1,7 +1,12 @@
+import java.util.HashMap;
 import java.util.Map;
 
 public class Pharmacy {
     private Map<String,Medication> medications;
+
+    public Pharmacy() {
+        this.medications = new HashMap<String,Medication>();
+    }
 
     public int getCount(){
         return medications.size();
@@ -12,7 +17,7 @@ public class Pharmacy {
     }
 
     public Medication findMedication(String medicationName){
-        return medications.get(medicationName);
+        return medications.getOrDefault(medicationName, null);
     }
 
     public void delete(String medicationName){
