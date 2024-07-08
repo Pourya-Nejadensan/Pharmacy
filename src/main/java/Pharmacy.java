@@ -6,4 +6,8 @@ public class Pharmacy {
     public int getCount(){
         return medications.size();
     }
+
+    public void save(Medication medication){
+            medications.put(medication.getName(), medication);
+    }
 }
