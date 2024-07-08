@@ -10,4 +10,8 @@ public class Pharmacy {
     public void save(Medication medication){
             medications.put(medication.getName(), medication);
     }
+
+    public Medication findMedication(String medicationName){
+        return medications.get(medicationName);
+    }
 }
