@@ -14,4 +14,8 @@ public class Pharmacy {
     public Medication findMedication(String medicationName){
         return medications.get(medicationName);
     }
+
+    public void delete(String medicationName){
+        medications.remove(medicationName);
+    }
 }
